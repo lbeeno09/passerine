@@ -1,2 +1,3 @@
 # Easter
-A small game engine to test my programming ability
+
+## A small game engine to test my programming ability
