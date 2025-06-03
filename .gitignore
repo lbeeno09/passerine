@@ -1,7 +1,6 @@
-# Ignore build files
-build
+.vs/
+bin/
+bin-int/
+**/*.user
 
-# Ignore dev env files
-Memo.md
-.vs/**
 *.code-workspace
