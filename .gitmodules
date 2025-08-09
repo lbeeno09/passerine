@@ -1,3 +1,0 @@
-[submodule "Passerine/Vendor/spdlog"]
-	path = Passerine/Vendor/spdlog
-	url = https://github.com/gabime/spdlog
