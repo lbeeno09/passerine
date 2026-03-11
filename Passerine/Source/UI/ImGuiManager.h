@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <d3d11.h>
 
@@ -10,4 +10,6 @@ public:
 
 	void BeginFrame();
 	void EndFrame();
+
+	void DrawLayout();
 };

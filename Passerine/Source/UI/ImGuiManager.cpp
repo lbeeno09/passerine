@@ -1,4 +1,4 @@
-#include "UI/ImGuiManager.h"
+﻿#include "UI/ImGuiManager.h"
 
 #include "imgui.h"
 #include "imgui_impl_win32.h"
@@ -90,4 +90,9 @@ void ImGuiManager::EndFrame()
         ImGui::UpdatePlatformWindows();
         ImGui::RenderPlatformWindowsDefault();
     }
+}
+
+void ImGuiManager::DrawLayout()
+{
+
 }

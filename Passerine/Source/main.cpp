@@ -1,4 +1,4 @@
-#include "Core/App.h"
+﻿#include "Core/Editor.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -7,8 +7,8 @@ int main()
 {
     try
     {
-        App app(1280, 720, L"Passerine");
-        app.Run();
+        Editor editor(1280, 720, L"Passerine");
+        editor.Run();
     }
     catch(std::exception& e)
     {

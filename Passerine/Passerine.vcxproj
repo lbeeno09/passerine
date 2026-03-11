@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8e630fd6-7db2-4c66-bff0-cc28a1d04ae4}</ProjectGuid>
+    <ProjectGuid>{b61bd356-f404-4a3b-bdfc-99f3317f523c}</ProjectGuid>
     <RootNamespace>Passerine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -74,6 +74,10 @@
     <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediate\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -107,7 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)deps\imgui\;$(SolutionDir)deps\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)deps\imgui;$(SolutionDir)deps\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)deps\imgui\;$(SolutionDir)deps\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source;$(SolutionDir)deps\imgui;$(SolutionDir)deps\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,13 +143,16 @@
     <ClCompile Include="..\deps\imgui\imgui_draw.cpp" />
     <ClCompile Include="..\deps\imgui\imgui_tables.cpp" />
     <ClCompile Include="..\deps\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="src\Core\Input.cpp" />
-    <ClCompile Include="src\Core\Timer.cpp" />
-    <ClCompile Include="src\Renderer\DX11Renderer.cpp" />
-    <ClCompile Include="src\Core\App.cpp" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Platform\Win32Window.cpp" />
-    <ClCompile Include="src\UI\ImGuiManager.cpp" />
+    <ClCompile Include="Source\Graphics\Grid.cpp" />
+    <ClCompile Include="Source\Graphics\Mesh.cpp" />
+    <ClCompile Include="Source\Graphics\Camera.cpp" />
+    <ClCompile Include="Source\Core\Editor.cpp" />
+    <ClCompile Include="Source\Core\Input.cpp" />
+    <ClCompile Include="Source\Core\Timer.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Window\Win32Window.cpp" />
+    <ClCompile Include="Source\Renderer\DX11Renderer.cpp" />
+    <ClCompile Include="Source\UI\ImGuiManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\deps\imgui\backends\imgui_impl_dx11.h" />
@@ -153,14 +160,23 @@
     <ClInclude Include="..\deps\imgui\imconfig.h" />
     <ClInclude Include="..\deps\imgui\imgui.h" />
     <ClInclude Include="..\deps\imgui\imgui_internal.h" />
-    <ClInclude Include="include\Core\App.h" />
-    <ClInclude Include="include\Core\Input.h" />
-    <ClInclude Include="include\Core\Timer.h" />
-    <ClInclude Include="include\Platform\IWindow.h" />
-    <ClInclude Include="include\Platform\Win32Window.h" />
-    <ClInclude Include="include\Renderer\DX11Renderer.h" />
-    <ClInclude Include="include\Renderer\IRenderer.h" />
-    <ClInclude Include="include\UI\ImGuiManager.h" />
+    <ClInclude Include="Source\Graphics\Grid.h" />
+    <ClInclude Include="Source\Graphics\Mesh.h" />
+    <ClInclude Include="Source\Graphics\Camera.h" />
+    <ClInclude Include="Source\Core\Editor.h" />
+    <ClInclude Include="Source\Core\Input.h" />
+    <ClInclude Include="Source\Core\Timer.h" />
+    <ClInclude Include="Source\Graphics\GraphicsTypes.h" />
+    <ClInclude Include="Source\Window\IWindow.h" />
+    <ClInclude Include="Source\Window\Win32Window.h" />
+    <ClInclude Include="Source\Renderer\DX11Renderer.h" />
+    <ClInclude Include="Source\Renderer\IRenderer.h" />
+    <ClInclude Include="Source\UI\ImGuiManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shaders\Shader.hlsl">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
