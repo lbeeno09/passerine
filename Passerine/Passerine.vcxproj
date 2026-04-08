@@ -143,16 +143,17 @@
     <ClCompile Include="..\deps\imgui\imgui_draw.cpp" />
     <ClCompile Include="..\deps\imgui\imgui_tables.cpp" />
     <ClCompile Include="..\deps\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="Source\Graphics\Grid.cpp" />
-    <ClCompile Include="Source\Graphics\Mesh.cpp" />
-    <ClCompile Include="Source\Graphics\Camera.cpp" />
-    <ClCompile Include="Source\Core\Editor.cpp" />
-    <ClCompile Include="Source\Core\Input.cpp" />
-    <ClCompile Include="Source\Core\Timer.cpp" />
+    <ClCompile Include="Source\Engine\Scene\Entity.cpp" />
+    <ClCompile Include="Source\Engine\Scene\Grid.cpp" />
+    <ClCompile Include="Source\Engine\Scene\Mesh.cpp" />
+    <ClCompile Include="Source\Engine\Scene\Camera.cpp" />
+    <ClCompile Include="Source\Editor\Editor.cpp" />
+    <ClCompile Include="Source\Engine\Core\Input.cpp" />
+    <ClCompile Include="Source\Engine\Core\Timer.cpp" />
     <ClCompile Include="Source\main.cpp" />
-    <ClCompile Include="Source\Window\Win32Window.cpp" />
-    <ClCompile Include="Source\Renderer\DX11Renderer.cpp" />
-    <ClCompile Include="Source\UI\ImGuiManager.cpp" />
+    <ClCompile Include="Source\Engine\Window\Win32Window.cpp" />
+    <ClCompile Include="Source\Engine\Renderer\DX11Renderer.cpp" />
+    <ClCompile Include="Source\Editor\ImGuiManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\deps\imgui\backends\imgui_impl_dx11.h" />
@@ -160,18 +161,20 @@
     <ClInclude Include="..\deps\imgui\imconfig.h" />
     <ClInclude Include="..\deps\imgui\imgui.h" />
     <ClInclude Include="..\deps\imgui\imgui_internal.h" />
-    <ClInclude Include="Source\Graphics\Grid.h" />
-    <ClInclude Include="Source\Graphics\Mesh.h" />
-    <ClInclude Include="Source\Graphics\Camera.h" />
-    <ClInclude Include="Source\Core\Editor.h" />
-    <ClInclude Include="Source\Core\Input.h" />
-    <ClInclude Include="Source\Core\Timer.h" />
-    <ClInclude Include="Source\Graphics\GraphicsTypes.h" />
-    <ClInclude Include="Source\Window\IWindow.h" />
-    <ClInclude Include="Source\Window\Win32Window.h" />
-    <ClInclude Include="Source\Renderer\DX11Renderer.h" />
-    <ClInclude Include="Source\Renderer\IRenderer.h" />
-    <ClInclude Include="Source\UI\ImGuiManager.h" />
+    <ClInclude Include="Source\Engine\Scene\Entity.h" />
+    <ClInclude Include="Source\Engine\Core\Math.h" />
+    <ClInclude Include="Source\Engine\Scene\Grid.h" />
+    <ClInclude Include="Source\Engine\Scene\Mesh.h" />
+    <ClInclude Include="Source\Engine\Scene\Camera.h" />
+    <ClInclude Include="Source\Editor\Editor.h" />
+    <ClInclude Include="Source\Engine\Core\Input.h" />
+    <ClInclude Include="Source\Engine\Core\Timer.h" />
+    <ClInclude Include="Source\Engine\Core\GraphicsTypes.h" />
+    <ClInclude Include="Source\Engine\Window\IWindow.h" />
+    <ClInclude Include="Source\Engine\Window\Win32Window.h" />
+    <ClInclude Include="Source\Engine\Renderer\DX11Renderer.h" />
+    <ClInclude Include="Source\Engine\Renderer\IRenderer.h" />
+    <ClInclude Include="Source\Editor\ImGuiManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Shader.hlsl">

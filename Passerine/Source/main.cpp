@@ -1,4 +1,4 @@
-﻿#include "Core/Editor.h"
+﻿#include "Editor/Editor.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -7,7 +7,7 @@ int main()
 {
     try
     {
-        Editor editor(1280, 720, L"Passerine");
+        Editor::Editor editor(1280, 720, L"Passerine");
         editor.Run();
     }
     catch(std::exception& e)

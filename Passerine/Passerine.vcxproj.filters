@@ -21,22 +21,22 @@
     <ClCompile Include="Source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Core\Editor.cpp">
+    <ClCompile Include="Source\Editor\Editor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Core\Input.cpp">
+    <ClCompile Include="Source\Engine\Core\Input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Core\Timer.cpp">
+    <ClCompile Include="Source\Engine\Core\Timer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Window\Win32Window.cpp">
+    <ClCompile Include="Source\Engine\Window\Win32Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Renderer\DX11Renderer.cpp">
+    <ClCompile Include="Source\Engine\Renderer\DX11Renderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\UI\ImGuiManager.cpp">
+    <ClCompile Include="Source\Editor\ImGuiManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\deps\imgui\imgui.cpp">
@@ -60,39 +60,42 @@
     <ClCompile Include="..\deps\imgui\imgui_widgets.cpp">
       <Filter>imgui</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Graphics\Camera.cpp">
+    <ClCompile Include="Source\Engine\Scene\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Graphics\Mesh.cpp">
+    <ClCompile Include="Source\Engine\Scene\Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Graphics\Grid.cpp">
+    <ClCompile Include="Source\Engine\Scene\Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Scene\Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\UI\ImGuiManager.h">
+    <ClInclude Include="Source\Editor\ImGuiManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Core\Editor.h">
+    <ClInclude Include="Source\Editor\Editor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Core\Input.h">
+    <ClInclude Include="Source\Engine\Core\Input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Core\Timer.h">
+    <ClInclude Include="Source\Engine\Core\Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Window\IWindow.h">
+    <ClInclude Include="Source\Engine\Window\IWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Window\Win32Window.h">
+    <ClInclude Include="Source\Engine\Window\Win32Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Renderer\DX11Renderer.h">
+    <ClInclude Include="Source\Engine\Renderer\DX11Renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Renderer\IRenderer.h">
+    <ClInclude Include="Source\Engine\Renderer\IRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\deps\imgui\imconfig.h">
@@ -110,16 +113,22 @@
     <ClInclude Include="..\deps\imgui\imgui_internal.h">
       <Filter>imgui</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Graphics\GraphicsTypes.h">
+    <ClInclude Include="Source\Engine\Core\GraphicsTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Graphics\Camera.h">
+    <ClInclude Include="Source\Engine\Scene\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Graphics\Mesh.h">
+    <ClInclude Include="Source\Engine\Scene\Mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Graphics\Grid.h">
+    <ClInclude Include="Source\Engine\Scene\Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Core\Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine\Scene\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
